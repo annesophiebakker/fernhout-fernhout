@@ -25,6 +25,15 @@ body {
   line-height: 1.6;
 }
 
+.shop-header {
+  position: relative;
+  background: var(--bordeaux);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2.5rem;
+}
+
 .hero-nav {
   position: absolute;
   top: 0;
@@ -224,10 +233,26 @@ body {
   z-index: 2;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 2rem 1.5rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+}
+
+.view-all-row {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 1.5rem 3.5rem;
+}
+
+.view-all-row .cta-button {
+  background: var(--bordeaux);
+  color: var(--cream);
+}
+
+.view-all-row .cta-button:hover {
+  background: var(--bordeaux-dark);
 }
 
 .card {
@@ -254,8 +279,8 @@ body {
 
 .card-images .shade-img {
   width: 100%;
-  height: 210px;
-  object-fit: contain;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   display: block;
   background: var(--paper);
 }

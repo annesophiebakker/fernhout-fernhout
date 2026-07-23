@@ -4,6 +4,10 @@
 // Om een foto te vervangen: zet het echte bestand in images/products/<slug>/
 // met dezelfde bestandsnaam (printvel.svg, licht-uit.svg, licht-aan.svg
 // mogen ook .jpg of .png worden, pas dan ook het pad hieronder aan).
+//
+// "featured: true" zorgt dat een product ook op de homepage verschijnt.
+// Nieuwe producten zonder "featured: true" verschijnen automatisch alleen
+// op de volledige shop-pagina (shop.html), niet op de homepage.
 
 const PRODUCT_OPTIONS = {
   diameters: ["20 cm", "25 cm", "30 cm"],
@@ -16,6 +20,7 @@ const PRODUCTS = [
     name: "Nico",
     description: "Handgemaakte lampenkap met een botanisch bladpatroon, geprint op transparant papier.",
     price: "€ 0,00",
+    featured: true,
     options: PRODUCT_OPTIONS,
     images: {
       printvel: "images/products/ring-blad/printvel.svg",
@@ -28,6 +33,7 @@ const PRODUCTS = [
     name: "Hermine",
     description: "Geometrisch patroon van cirkels en takken, ontworpen om met licht tot leven te komen.",
     price: "€ 0,00",
+    featured: true,
     options: PRODUCT_OPTIONS,
     images: {
       printvel: "images/products/cirkel-tak/printvel.svg",
@@ -40,6 +46,7 @@ const PRODUCTS = [
     name: "Thora",
     description: "Fijn varenmotief dat overdag nauwelijks zichtbaar is en 's avonds volledig oplicht.",
     price: "€ 0,00",
+    featured: true,
     options: PRODUCT_OPTIONS,
     images: {
       printvel: "images/products/venster-varen/printvel.svg",

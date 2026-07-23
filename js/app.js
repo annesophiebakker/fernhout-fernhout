@@ -1,7 +1,8 @@
-function renderProducts() {
+function renderProducts({ featuredOnly = false } = {}) {
   const catalog = document.getElementById("catalog");
+  const list = featuredOnly ? PRODUCTS.filter((p) => p.featured) : PRODUCTS;
 
-  PRODUCTS.forEach((product) => {
+  list.forEach((product) => {
     const card = document.createElement("div");
     card.className = "card";
 
@@ -109,6 +110,7 @@ function initMobileMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderProducts();
+  const isShopPage = document.body.dataset.page === "shop";
+  renderProducts({ featuredOnly: !isShopPage });
   initMobileMenu();
 });
