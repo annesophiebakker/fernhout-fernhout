@@ -6,9 +6,11 @@
   --accent-dark: #7c3d1f;
   --ochre: #c98a2e;
   --border: #ddceb3;
-  --bordeaux: #5c1a24;
-  --bordeaux-dark: #3f0f16;
+  --bordeaux: #502021;
+  --bordeaux-dark: #341113;
   --cream: #f3e8d3;
+  --petrol: #3f6886;
+  --petrol-dark: #2c4d63;
 }
 
 * {
@@ -179,6 +181,11 @@ body {
   border-color: var(--accent-dark);
 }
 
+.card:nth-child(even) .toggle-row button.active {
+  background: var(--petrol-dark);
+  border-color: var(--petrol-dark);
+}
+
 .card-body {
   padding: 1.25rem;
   flex: 1;
@@ -194,11 +201,63 @@ body {
   color: var(--accent-dark);
 }
 
+.card:nth-child(even) .card-body h2 {
+  color: var(--petrol-dark);
+}
+
 .card-body p {
   margin: 0 0 1rem;
   color: var(--muted);
   font-size: 14px;
   flex: 1;
+}
+
+.catalog-intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.catalog-intro h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--accent-dark);
+  margin: 0 0 0.5rem;
+}
+
+.catalog-intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+  gap: 0.75rem;
+}
+
+.options select {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fbf6ec;
+  color: var(--ink);
+  padding: 0.3rem 0.5rem;
+  font-size: 13px;
+  flex: 1;
+  max-width: 140px;
 }
 
 .price {
