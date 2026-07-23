@@ -21,6 +21,11 @@ const PRODUCTS = [
     description: "Handgemaakte lampenkap met een botanisch bladpatroon, geprint op transparant papier.",
     price: "€ 0,00",
     featured: true,
+    palette: [
+      { name: "Roestbruin", hex: "#8a5a3c" },
+      { name: "Zandbeige", hex: "#d8c9a3" },
+      { name: "Leigrijs", hex: "#6b7280" }
+    ],
     options: PRODUCT_OPTIONS,
     images: {
       printvel: "images/products/ring-blad/printvel.svg",

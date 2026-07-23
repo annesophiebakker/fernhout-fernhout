@@ -70,6 +70,20 @@ body {
   text-decoration: underline;
 }
 
+.hero-links a.active,
+.mobile-menu a.active {
+  opacity: 1;
+  background: rgba(243, 232, 211, 0.18);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  margin: -0.3rem -0.75rem;
+}
+
+.mobile-menu a.active {
+  border-radius: 6px;
+  margin: 0;
+}
+
 .hamburger {
   display: none;
   position: relative;
@@ -350,6 +364,136 @@ body {
 
 .card:nth-child(even) .card-body h2 {
   color: var(--petrol-dark);
+}
+
+.product-name-link {
+  cursor: pointer;
+}
+
+.product-name-link:hover {
+  text-decoration: underline;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: rgba(43, 33, 24, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-card {
+  position: relative;
+  background: #fbf6ec;
+  border-radius: 14px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.modal-media {
+  flex: 1 1 340px;
+  padding: 1.5rem;
+  border-right: 1px solid var(--border);
+}
+
+.modal-breadcrumb {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+.modal-shade-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: var(--paper);
+}
+
+.modal-info {
+  flex: 1 1 320px;
+  padding: 1.5rem 1.75rem;
+}
+
+.modal-info h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  color: var(--accent-dark);
+  margin: 0 0 0.75rem;
+}
+
+.modal-description {
+  color: var(--ink);
+  opacity: 0.85;
+  font-size: 14px;
+  margin: 0 0 1.25rem;
+}
+
+.modal-colors {
+  margin-bottom: 1.25rem;
+}
+
+.modal-colors-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.modal-colors-pending {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.color-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.color-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 13px;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem 0.25rem 0.4rem;
+}
+
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .card-body p {
