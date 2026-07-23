@@ -90,4 +90,25 @@ async function startCheckout(product, chosenOptions) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", renderProducts);
+function initMobileMenu() {
+  const hamburger = document.querySelector(".hamburger");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  if (!hamburger || !mobileMenu) return;
+
+  hamburger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts();
+  initMobileMenu();
+});
