@@ -183,7 +183,7 @@ body {
 
 .card-images .printvel-cell img {
   width: 100%;
-  height: 80px;
+  aspect-ratio: 3.5 / 1;
   object-fit: cover;
   display: block;
   background: var(--paper);
@@ -191,7 +191,7 @@ body {
 
 .card-images .shade-img {
   width: 100%;
-  height: 130px;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
   background: var(--paper);
@@ -286,15 +286,15 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 26px;
   font-weight: 500;
-  color: var(--cream);
+  color: var(--petrol-dark);
   margin: 0 0 0.5rem;
 }
 
 .catalog-intro p {
   margin: 0 auto;
   max-width: 560px;
-  color: var(--cream);
-  opacity: 0.9;
+  color: var(--ink);
+  opacity: 0.75;
   font-size: 15px;
 }
 
