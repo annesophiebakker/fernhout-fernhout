@@ -346,7 +346,7 @@ body {
 
 .catalog-section {
   position: relative;
-  background-image: url("../images/section-lamp.jpg");
+  background-image: url("../images/section-printvel.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -356,10 +356,10 @@ body {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(63, 104, 134, 0.97) 0%,
-    rgba(63, 104, 134, 0.6) 20%,
-    rgba(63, 104, 134, 0.6) 80%,
-    rgba(63, 104, 134, 0.97) 100%
+    rgba(63, 104, 134, 0.9) 0%,
+    rgba(243, 232, 211, 0.72) 15%,
+    rgba(243, 232, 211, 0.72) 85%,
+    rgba(63, 104, 134, 0.9) 100%
   );
 }
 
