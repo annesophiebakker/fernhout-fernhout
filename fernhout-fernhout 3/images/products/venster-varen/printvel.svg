@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f1efe8"/>
+  <rect x="8" y="8" width="384" height="384" fill="none" stroke="#5f5e5a" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="200" y="190" font-family="sans-serif" font-size="20" fill="#5f5e5a" text-anchor="middle">foto ontbreekt nog</text>
+  <text x="200" y="220" font-family="sans-serif" font-size="16" fill="#5f5e5a" text-anchor="middle">printvel (los patroon)</text>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#2c2c2a"/>
+  <rect x="8" y="8" width="384" height="384" fill="none" stroke="#b4b2a9" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="200" y="190" font-family="sans-serif" font-size="20" fill="#b4b2a9" text-anchor="middle">foto ontbreekt nog</text>
+  <text x="200" y="220" font-family="sans-serif" font-size="16" fill="#b4b2a9" text-anchor="middle">lampenkap, licht uit</text>
+</svg>
