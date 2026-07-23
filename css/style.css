@@ -20,8 +20,8 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--petrol);
+  color: var(--cream);
   line-height: 1.6;
 }
 
@@ -79,7 +79,12 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(63, 15, 22, 0.55), rgba(63, 15, 22, 0.75));
+  background: linear-gradient(
+    180deg,
+    rgba(80, 32, 33, 0.5) 0%,
+    rgba(63, 104, 134, 0.55) 55%,
+    rgba(63, 104, 134, 0.97) 100%
+  );
 }
 
 .hero-content {
@@ -135,11 +140,6 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-.card:nth-child(even) {
-  background: #eef2f4;
-  border-color: #c9d6dc;
 }
 
 .card-images {
@@ -209,10 +209,6 @@ body {
   transform: translateX(20px);
 }
 
-.card:nth-child(even) .light-switch.on .switch-track {
-  background: var(--petrol-dark);
-}
-
 .switch-label {
   font-size: 13px;
   color: var(--muted);
@@ -246,9 +242,7 @@ body {
 }
 
 .catalog-intro {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 0.5rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
 }
 
@@ -256,13 +250,15 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 26px;
   font-weight: 500;
-  color: var(--accent-dark);
+  color: var(--cream);
   margin: 0 0 0.5rem;
 }
 
 .catalog-intro p {
-  margin: 0;
-  color: var(--muted);
+  margin: 0 auto;
+  max-width: 560px;
+  color: var(--cream);
+  opacity: 0.9;
   font-size: 15px;
 }
 
@@ -315,6 +311,7 @@ body {
 footer {
   text-align: center;
   padding: 2rem 1.5rem 3rem;
-  color: var(--muted);
+  color: var(--cream);
+  opacity: 0.8;
   font-size: 13px;
 }

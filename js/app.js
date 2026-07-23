@@ -20,7 +20,6 @@ function renderProducts() {
       </div>
       <div class="card-body">
         <h2>${product.name}</h2>
-        <p>${product.description}</p>
         <div class="options">
           <label>Kleurstelling
             <select class="opt-color">
