@@ -6,7 +6,6 @@
 // mogen ook .jpg of .png worden, pas dan ook het pad hieronder aan).
 
 const PRODUCT_OPTIONS = {
-  colors: ["Naturel", "Bordeaux", "Antraciet"],
   diameters: ["20 cm", "25 cm", "30 cm"],
   heights: ["18 cm", "22 cm", "26 cm"]
 };

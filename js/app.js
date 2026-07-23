@@ -21,11 +21,6 @@ function renderProducts() {
       <div class="card-body">
         <h2>${product.name}</h2>
         <div class="options">
-          <label>Kleurstelling
-            <select class="opt-color">
-              ${product.options.colors.map((c) => `<option>${c}</option>`).join("")}
-            </select>
-          </label>
           <label>Diameter
             <select class="opt-diameter">
               ${product.options.diameters.map((d) => `<option>${d}</option>`).join("")}
@@ -58,7 +53,6 @@ function renderProducts() {
     const buyButton = card.querySelector(".buy-button");
     buyButton.addEventListener("click", () => {
       const chosenOptions = {
-        color: card.querySelector(".opt-color").value,
         diameter: card.querySelector(".opt-diameter").value,
         height: card.querySelector(".opt-height").value
       };

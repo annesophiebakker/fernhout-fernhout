@@ -25,7 +25,7 @@ module.exports = async function handler(req, res) {
   }
 
   const optionsText = options
-    ? ` (${options.color}, ${options.diameter} diameter, ${options.height} hoog)`
+    ? ` (${options.diameter} diameter, ${options.height} hoog)`
     : "";
 
   // Verwacht price als "€ 12,50" of "12.50" - haal er een geldig bedrag uit.
