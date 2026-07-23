@@ -181,7 +181,7 @@ body {
 
 .card-images .printvel-cell img {
   width: 100%;
-  height: 140px;
+  height: 100px;
   object-fit: cover;
   display: block;
   background: var(--paper);
@@ -189,7 +189,7 @@ body {
 
 .card-images .shade-img {
   width: 100%;
-  height: 220px;
+  height: 160px;
   object-fit: cover;
   display: block;
   background: var(--paper);
@@ -200,7 +200,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 0.85rem 0;
+  padding: 0.6rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -248,7 +248,7 @@ body {
 }
 
 .card-body {
-  padding: 1.25rem;
+  padding: 1rem 1.25rem 1.25rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -297,8 +297,8 @@ body {
 .options {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  margin-bottom: 1rem;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
 }
 
 .options label {
@@ -338,6 +338,49 @@ body {
 
 .buy-button:hover {
   opacity: 0.9;
+}
+
+.feature-photo {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/section-lamp.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.feature-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(63, 104, 134, 0.97) 0%,
+    rgba(63, 104, 134, 0.35) 30%,
+    rgba(63, 104, 134, 0.35) 70%,
+    rgba(63, 104, 134, 0.97) 100%
+  );
+}
+
+.shop-cue {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  animation: bounce 2s infinite;
+}
+
+.shop-cue:hover {
+  opacity: 1;
 }
 
 footer {
