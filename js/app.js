@@ -20,6 +20,23 @@ function renderProducts() {
       <div class="card-body">
         <h2>${product.name}</h2>
         <p>${product.description}</p>
+        <div class="options">
+          <label>Kleurstelling
+            <select class="opt-color">
+              ${product.options.colors.map((c) => `<option>${c}</option>`).join("")}
+            </select>
+          </label>
+          <label>Diameter
+            <select class="opt-diameter">
+              ${product.options.diameters.map((d) => `<option>${d}</option>`).join("")}
+            </select>
+          </label>
+          <label>Hoogte
+            <select class="opt-height">
+              ${product.options.heights.map((h) => `<option>${h}</option>`).join("")}
+            </select>
+          </label>
+        </div>
         <div class="price">${product.price}</div>
         <button class="buy-button" type="button">Bestellen</button>
       </div>
@@ -42,18 +59,30 @@ function renderProducts() {
     });
 
     const buyButton = card.querySelector(".buy-button");
-    buyButton.addEventListener("click", () => startCheckout(product));
+    buyButton.addEventListener("click", () => {
+      const chosenOptions = {
+        color: card.querySelector(".opt-color").value,
+        diameter: card.querySelector(".opt-diameter").value,
+        height: card.querySelector(".opt-height").value
+      };
+      startCheckout(product, chosenOptions);
+    });
 
     catalog.appendChild(card);
   });
 }
 
-async function startCheckout(product) {
+async function startCheckout(product, chosenOptions) {
   try {
     const response = await fetch("/api/create-payment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ slug: product.slug, name: product.name, price: product.price })
+      body: JSON.stringify({
+        slug: product.slug,
+        name: product.name,
+        price: product.price,
+        options: chosenOptions
+      })
     });
 
     if (!response.ok) {
