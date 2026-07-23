@@ -11,11 +11,12 @@ function renderProducts() {
           <img src="${product.images.printvel}" alt="Printvel van ${product.name}" />
         </div>
         <img class="shade-img" src="${product.images.lichtUit}" alt="${product.name}, licht uit" data-off="${product.images.lichtUit}" data-on="${product.images.lichtAan}" />
-        <img class="shade-img-placeholder" src="${product.images.lichtAan}" alt="${product.name}, licht aan" style="display:none;" />
       </div>
-      <div class="toggle-row">
-        <button class="light-off active" type="button">Licht uit</button>
-        <button class="light-on" type="button">Licht aan</button>
+      <div class="switch-row">
+        <button class="light-switch" type="button" aria-pressed="false" aria-label="Licht aan of uit zetten">
+          <span class="switch-track"><span class="switch-thumb"></span></span>
+        </button>
+        <span class="switch-label">Licht uit</span>
       </div>
       <div class="card-body">
         <h2>${product.name}</h2>
@@ -43,19 +44,16 @@ function renderProducts() {
     `;
 
     const shadeImg = card.querySelector(".shade-img");
-    const offBtn = card.querySelector(".light-off");
-    const onBtn = card.querySelector(".light-on");
+    const switchButton = card.querySelector(".light-switch");
+    const switchLabel = card.querySelector(".switch-label");
 
-    offBtn.addEventListener("click", () => {
-      shadeImg.src = shadeImg.dataset.off;
-      offBtn.classList.add("active");
-      onBtn.classList.remove("active");
-    });
-
-    onBtn.addEventListener("click", () => {
-      shadeImg.src = shadeImg.dataset.on;
-      onBtn.classList.add("active");
-      offBtn.classList.remove("active");
+    switchButton.addEventListener("click", () => {
+      const isOn = switchButton.getAttribute("aria-pressed") === "true";
+      const turningOn = !isOn;
+      switchButton.setAttribute("aria-pressed", String(turningOn));
+      switchButton.classList.toggle("on", turningOn);
+      shadeImg.src = turningOn ? shadeImg.dataset.on : shadeImg.dataset.off;
+      switchLabel.textContent = turningOn ? "Licht aan" : "Licht uit";
     });
 
     const buyButton = card.querySelector(".buy-button");
