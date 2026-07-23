@@ -17,12 +17,16 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  const { slug, name, price } = req.body || {};
+  const { slug, name, price, options } = req.body || {};
 
   if (!slug || !name || !price) {
     res.status(400).json({ error: "slug, name en price zijn verplicht" });
     return;
   }
+
+  const optionsText = options
+    ? ` (${options.color}, ${options.diameter} diameter, ${options.height} hoog)`
+    : "";
 
   // Verwacht price als "€ 12,50" of "12.50" - haal er een geldig bedrag uit.
   const numericPrice = String(price)
@@ -49,10 +53,10 @@ module.exports = async function handler(req, res) {
           currency: "EUR",
           value: amount.toFixed(2)
         },
-        description: `Bestelling: ${name}`,
+        description: `Bestelling: ${name}${optionsText}`,
         redirectUrl: `${origin}/?bestelling=${encodeURIComponent(slug)}`,
         webhookUrl: `${origin}/api/webhook`,
-        metadata: { slug }
+        metadata: { slug, options }
       })
     });
 
