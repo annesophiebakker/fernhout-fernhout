@@ -1,0 +1,228 @@
+:root {
+  --paper: #ede2ce;
+  --ink: #2b2118;
+  --muted: #7d6b57;
+  --accent: #a8542e;
+  --accent-dark: #7c3d1f;
+  --ochre: #c98a2e;
+  --border: #ddceb3;
+  --bordeaux: #5c1a24;
+  --bordeaux-dark: #3f0f16;
+  --cream: #f3e8d3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.site-nav {
+  background: var(--bordeaux);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.nav-side {
+  display: flex;
+  gap: 1.75rem;
+  flex: 1;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.site-nav a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.nav-logo {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  padding: 0 1.5rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("images/hero-interior.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(63, 15, 22, 0.55), rgba(63, 15, 22, 0.75));
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: var(--cream);
+  padding: 2rem 1.5rem;
+  max-width: 640px;
+}
+
+.hero-content h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.hero-content p {
+  margin: 0 0 1.75rem;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--bordeaux-dark);
+  font-weight: 500;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.cta-button:hover {
+  background: #fff;
+}
+
+.catalog {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fbf6ec;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+}
+
+.card-images .printvel-cell {
+  grid-column: 1 / -1;
+}
+
+.card-images img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  background: var(--paper);
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.toggle-row button {
+  border: 1px solid var(--border);
+  background: #fbf6ec;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.toggle-row button.active {
+  background: var(--accent-dark);
+  color: #fbf6ec;
+  border-color: var(--accent-dark);
+}
+
+.card-body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body h2 {
+  margin: 0 0 0.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--accent-dark);
+}
+
+.card-body p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 14px;
+  flex: 1;
+}
+
+.price {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.buy-button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.buy-button:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  color: var(--muted);
+  font-size: 13px;
+}
