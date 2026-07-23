@@ -53,5 +53,77 @@ const PRODUCTS = [
       lichtUit: "images/products/venster-varen/licht-uit.svg",
       lichtAan: "images/products/venster-varen/licht-aan.svg"
     }
+  },
+  {
+    slug: "ecky",
+    name: "Ecky",
+    description: "Handgemaakt, uniek patroon, geprint op transparant papier.",
+    price: "€ 0,00",
+    options: PRODUCT_OPTIONS,
+    images: {
+      printvel: "images/products/ecky/printvel.svg",
+      lichtUit: "images/products/ecky/licht-uit.svg",
+      lichtAan: "images/products/ecky/licht-aan.svg"
+    }
+  },
+  {
+    slug: "myra",
+    name: "Myra",
+    description: "Handgemaakt, uniek patroon, geprint op transparant papier.",
+    price: "€ 0,00",
+    options: PRODUCT_OPTIONS,
+    images: {
+      printvel: "images/products/myra/printvel.svg",
+      lichtUit: "images/products/myra/licht-uit.svg",
+      lichtAan: "images/products/myra/licht-aan.svg"
+    }
+  },
+  {
+    slug: "lietje",
+    name: "Lietje",
+    description: "Handgemaakt, uniek patroon, geprint op transparant papier.",
+    price: "€ 0,00",
+    options: PRODUCT_OPTIONS,
+    images: {
+      printvel: "images/products/lietje/printvel.svg",
+      lichtUit: "images/products/lietje/licht-uit.svg",
+      lichtAan: "images/products/lietje/licht-aan.svg"
+    }
+  },
+  {
+    slug: "carel",
+    name: "Carel",
+    description: "Handgemaakt, uniek patroon, geprint op transparant papier.",
+    price: "€ 0,00",
+    options: PRODUCT_OPTIONS,
+    images: {
+      printvel: "images/products/carel/printvel.svg",
+      lichtUit: "images/products/carel/licht-uit.svg",
+      lichtAan: "images/products/carel/licht-aan.svg"
+    }
+  },
+  {
+    slug: "margie",
+    name: "Margie",
+    description: "Handgemaakt, uniek patroon, geprint op transparant papier.",
+    price: "€ 0,00",
+    options: PRODUCT_OPTIONS,
+    images: {
+      printvel: "images/products/margie/printvel.svg",
+      lichtUit: "images/products/margie/licht-uit.svg",
+      lichtAan: "images/products/margie/licht-aan.svg"
+    }
+  },
+  {
+    slug: "henriette",
+    name: "Henriëtte",
+    description: "Handgemaakt, uniek patroon, geprint op transparant papier.",
+    price: "€ 0,00",
+    options: PRODUCT_OPTIONS,
+    images: {
+      printvel: "images/products/henriette/printvel.svg",
+      lichtUit: "images/products/henriette/licht-uit.svg",
+      lichtAan: "images/products/henriette/licht-aan.svg"
+    }
   }
 ];

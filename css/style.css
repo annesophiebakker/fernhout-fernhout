@@ -25,15 +25,6 @@ body {
   line-height: 1.6;
 }
 
-.shop-header {
-  position: relative;
-  background: var(--bordeaux);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 2.5rem;
-}
-
 .hero-nav {
   position: absolute;
   top: 0;
@@ -51,6 +42,11 @@ body {
   font-size: 22px;
   color: var(--cream);
   letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.catalog-section.has-nav {
+  padding-top: 5.5rem;
 }
 
 .hero-links {
@@ -279,7 +275,7 @@ body {
 
 .card-images .shade-img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
   background: var(--paper);
