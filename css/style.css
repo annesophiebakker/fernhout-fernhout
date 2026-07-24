@@ -38,8 +38,8 @@ body {
 }
 
 .hero-logo {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
+  font-family: "Boecklins Universe", "Arnold Böcklin", Georgia, serif;
+  font-size: 30px;
   color: var(--cream);
   letter-spacing: 0.02em;
   text-decoration: none;
